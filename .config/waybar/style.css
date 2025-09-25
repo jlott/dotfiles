@@ -1,0 +1,165 @@
+/* ===== Colors ===== */
+@define-color color_black      rgb(0, 0, 0);
+@define-color color_white      rgb(255, 255, 255);
+@define-color color_gray       rgb(146, 131, 116);
+@define-color color_gray_pale  rgb(168, 153, 132);
+@define-color color_red        rgb(204, 36, 29);
+@define-color color_red_pale   rgb(251, 73, 52);
+@define-color color_green      rgb(152, 151, 26);
+@define-color color_green_pale rgb(184, 187, 38);
+@define-color color_yellow     rgb(215, 153, 33);
+@define-color color_yellow_pale rgb(250, 189, 47);
+@define-color color_blue       rgb(69, 133, 136);
+@define-color color_blue_pale  rgb(131, 165, 152);
+@define-color color_purple     rgb(177, 98, 134);
+@define-color color_purple_pale rgb(211, 134, 155);
+@define-color color_aqua       rgb(104, 157, 106);
+@define-color color_aqua_pale  rgb(142, 192, 124);
+@define-color color_orange     rgb(214, 93, 14);
+@define-color color_orange_pale rgb(254, 128, 25);
+@define-color color_bg_0       rgb(29, 32, 33);
+@define-color color_bg_1       rgb(40, 40, 40);
+@define-color color_bg_2       rgb(60, 56, 54);
+@define-color color_bg_3       rgb(80, 73, 69);
+@define-color color_bg_4       rgb(102, 92, 84);
+@define-color color_bg_5       rgb(124, 111, 100);
+@define-color color_fg_0       rgb(251, 241, 199);
+@define-color color_fg_1       rgb(235, 219, 178);
+@define-color color_fg_2       rgb(213, 196, 161);
+@define-color color_fg_3       rgb(189, 174, 147);
+@define-color color_fg_4       rgb(168, 153, 132);
+
+/* ===== Base ===== */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", "Symbols Nerd Font Mono";
+  font-size: 18px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: rgba(0,0,0,0.8);
+  border-bottom: 0px solid #ffffff;
+  background: transparent;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+#clock {
+  background-color: @color_fg_2;
+  color: @color_bg_1;
+  border-radius: 15px;
+  padding: 3px 10px 3px 10px;
+  margin: 0px 0px 0px 10px;
+  border: 3px solid @color_bg_1;
+  font-weight: bold;
+}
+
+#workspaces {
+  background: @color_bg_1;
+  border-radius: 15px;
+  border: 2px solid @color_orange;
+  font-weight: bold;
+  color: @color_bg_1;
+}
+
+#workspaces button {
+  padding: 0px 10px 0px 10px;
+  margin: 4px 4px 4px 4px;
+  border-radius: 15px;
+  border: 0px;
+  color: @color_fg_4;
+  background: @color_bg_3;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.9;
+}
+
+#workspaces button.active {
+  color: @color_fg_0;
+  background: @color_bg_5;
+  border-radius: 15px;
+  min-width: 35px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1.0;
+}
+
+#workspaces button:hover {
+  color: @color_fg_4;
+  background: @color_bg_3;
+  border-radius: 15px;
+  opacity: 1.0;
+}
+
+#cpu {
+  background-color: @color_bg_2;
+  color: @color_fg_1;
+  border-radius: 15px;
+  padding: 3px 13px 3px 13px;
+  margin: 0px 5px 0px 0px;
+  border: 2px solid @color_orange;
+}
+
+#memory {
+  background-color: @color_bg_2;
+  color: @color_fg_1;
+  border-radius: 15px;
+  padding: 3px 13px 3px 13px;
+  margin: 0px 5px 0px 0px;
+  border: 2px solid @color_orange;
+}
+
+#network {
+  background-color: @color_bg_2;
+  color: @color_fg_1;
+  border-radius: 15px;
+  padding: 3px 13px 3px 13px;
+  margin: 0px 5px 0px 0px;
+  border: 2px solid @color_orange;
+}
+
+#temperature {
+  background-color: @color_bg_2;
+  color: @color_fg_1;
+  border-radius: 15px;
+  padding: 3px 13px 3px 13px;
+  margin: 0px 5px 0px 0px;
+  border: 2px solid @color_orange;
+}
+
+#battery {
+  background-color: @color_bg_2;
+  color: @color_fg_1;
+  border-radius: 15px;
+  padding: 3px 13px 3px 13px;
+  margin: 0px 5px 0px 0px;
+  border: 2px solid @color_orange;
+}
+
+#battery.charging, #battery.plugged {
+  color: @color_fg_1;
+  background-color: @color_bg_2;
+}
+
+#battery.critical:not(.charging) {
+  background-color: @color_orange;
+  color: @color_bg_1;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+tooltip {
+  border-radius: 16px;
+  background-color: @color_bg_2;
+  opacity: 0.9;
+  padding: 15px;
+  margin: 0px;
+}
+
+tooltip label {
+  color: @color_fg_1;
+  font-size: 15px;
+}

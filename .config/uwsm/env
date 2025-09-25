@@ -1,0 +1,9 @@
+export XCURSOR_SIZE=24
+
+export QT_QPA_PLATFORM="wayland;xcb"
+export GUROBI_HOME="/home/johann/Programs/gurobi1203"
+export PATH="${PATH}:/home/johann/Programs/gurobi1203/bin"
+export LD_LIBRARY_PATH="/home/johann/Programs/gurobi1203/lib"
+export GRB_LICENSE_FILE="/home/johann/Licenses/gurobi.lic"
+
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
