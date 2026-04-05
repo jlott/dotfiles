@@ -13,6 +13,7 @@
         "network",
         "cpu",
         "memory",
+        "disk",
         "temperature"
     ],
     "modules-center": [
@@ -44,7 +45,8 @@
     },
     "clock": {
         "format": "{:%H:%M %a}",
-        "tooltip": false
+        "tooltip": true,
+        "tooltip-format": "{:%d-%m-%Y}"
     },
     "cpu": {
         "format": " {usage}%"
@@ -55,7 +57,15 @@
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "format": "{temperatureC}°C"
+        "format": "{temperatureC}°C"
+    },
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}%",
+        "unit": "GB",
+        "tooltip": true,
+        "tooltip-format": "{used} used out of {total} total"
+        // 0.25 GB out of 2000.00 GB available. Alternatively 241.3MiB out of 1.9TiB available
     },
     "backlight": {
         // "device": "acpi_video1",

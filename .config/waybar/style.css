@@ -109,6 +109,15 @@ window#waybar {
   border: 2px solid @color_orange;
 }
 
+#disk {
+  background-color: @color_bg_2;
+  color: @color_fg_1;
+  border-radius: 15px;
+  padding: 3px 13px 3px 13px;
+  margin: 0px 5px 0px 0px;
+  border: 2px solid @color_orange;
+}
+
 #network {
   background-color: @color_bg_2;
   color: @color_fg_1;
